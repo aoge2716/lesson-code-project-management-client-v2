@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import ProjectListPage from "./pages/ProjectListPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import EditProjectPage from "./pages/EditProjectPage";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage"
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Route exact path="/" element={<HomePage />} />
         <Route exact path="/projects" element={<ProjectListPage />} />
         <Route exact path="/projects/:projectId" element={<ProjectDetailsPage />} />
-        <Route exact path="/projects/edit/:projectId" element={<EditProjectPage />} />           
+        <Route exact path="/projects/edit/:projectId" element={<EditProjectPage />} />     
+        <Route exact path="/signup" element={<SignupPage/>} />     
+        <Route exact path="/login" element={<LoginPage/>} /> 
       </Routes>
     </div>
   );
