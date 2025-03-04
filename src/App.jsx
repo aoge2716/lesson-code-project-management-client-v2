@@ -7,7 +7,8 @@ import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import EditProjectPage from "./pages/EditProjectPage";
 import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage"
-import IsPrivate from "./components/Private";
+import IsPrivate from "./components/IsPrivate";
+import IsAnon from "./components/isAnon";
 
 function App() {
   return (
@@ -37,12 +38,12 @@ function App() {
 
         <Route 
           exact path="/signup" 
-          element={<SignupPage/>} 
+          element={ <IsAnon> <SignupPage/> </IsAnon>} 
         />
 
         <Route 
           exact path="/login" 
-          element={<LoginPage/>} 
+          element={ <IsAnon> <LoginPage/> </IsAnon>} 
         />
 
       </Routes>
