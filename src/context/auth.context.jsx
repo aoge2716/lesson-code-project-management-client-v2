@@ -34,14 +34,14 @@ function AuthProviderWrapper(props){
         setIsLoggedIn(false);
         setIsLoading(false);
         setUser(null);
-        console.log("invalid token", error);
+        console.log("invalid token");
       }
 
     }else{
       setIsLoggedIn(false);
       setIsLoading(false);
       setUser(null);
-      console.log("!storedToken", error)
+      console.log("!storedToken")
     }
   }
 
@@ -68,7 +68,7 @@ function AuthProviderWrapper(props){
         storeToken,
         authenticateUser,
         logOutUser,
-        
+
       }}
     >
       {props.children}
